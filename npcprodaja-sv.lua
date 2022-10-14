@@ -22,10 +22,8 @@ RegisterServerEvent('zapocniprodaju', function(i, deal)
     local x = ESX.GetPlayerFromId(source)
     local xPlayers = ESX.GetExtendedPlayers('job', 'police')
     local coords = x.getCoords(true)
-    local pozovipd = false 
     if cenedroga[i] then
         if jelhoce() then
-            pozovipd = true 
             if exports.ox_inventory:Search(source, 'count', i) >= 1 then 
                 exports.ox_inventory:RemoveItem(source, i, 1)
                 exports.ox_inventory:AddItem(source, 'black_money', cenedroga[i])
